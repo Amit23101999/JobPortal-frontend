@@ -1,0 +1,150 @@
+<!-- <html>
+
+<body>
+    <table class="table">
+        <thead class="heading">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Technology</th>
+                <th scope="col">Skills</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">Experience</th>
+                <th scope="col">Location</th>
+                <th scope="col">CTC</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <tr *ngFor="let row of postedjob">
+                    <td>{{row.id}}</td>
+                    <td>{{row.role}}</td>
+                    <td>{{row.company}}</td>
+                    <td>{{row.description}}</td>
+                    <td>{{row.exp}}</td>
+                    <td>{{row.salary}}</td>
+                    <td>{{row.dept}}</td>
+                    <td><button class="btn btn-success" (click)="applylink()">Update</button></td>
+                    <td><button class="btn btn-success" (click)="applylink()">Delete</button></td>
+                    <td><button class="btn btn-success" (click)="applylink()">View</button></td>
+                </tr>
+                <tr> -->
+<!-- <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td> -->
+<!-- </tr>
+                <tr> -->
+<!-- <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td> -->
+<!-- </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html> -->
+
+<style>
+    h1 {
+        font-family: 'Georgia', 'cursive', 'bold';
+    }
+    
+    body {
+        background-image: url("https://digitallearning.eletsonline.com/wp-content/uploads/2018/10/Job-Seekers.jpg");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0.4;
+    }
+    
+    .card {
+        width: 300px;
+        height: 550px;
+        color: rgb(17, 15, 15);
+        padding: 100px 50px;
+        font-family: 'Montserrat', 'sans-serif';
+        max-width: 100%;
+        border-radius: 20px;
+        text-align: center;
+        text-decoration-color: black;
+        /* margin-top: 5px; */
+        margin-left: 50px;
+        opacity: 0.9;
+    }
+    
+    .link:hover {
+        background-color: rgb(25, 196, 33);
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    }
+    
+    tbody {
+        overflow-y: scroll;
+        overflow-x: scroll;
+    }
+    
+    table {
+        top: auto;
+    }
+    
+    .back {
+        margin-bottom: 20px;
+        margin-left: 90%;
+        padding: 10px;
+    }
+</style>
+
+
+<body></body>
+<!-- <div class="card" style="width: 1170px;"> -->
+<div class="card" style="width: 1170px;">
+    <form action="\" method="post">
+        <button (click)="backtoprevious()" class="back btn btn-success">Back</button>
+        <table class="table table-light">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Company Name</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Experience</th>
+                    <!-- <th scope="col">Location</th> -->
+                    <th scope="col">CTC</th>
+                    <!-- <th scope="col">Update</th> -->
+                    <th scope="col">Delete</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <tr *ngFor="let row of postedjob">
+                        <td>{{row.id}}</td>
+                        <td>{{row.company}}</td>
+                        <td>{{row.role}}</td>
+                        <td>{{row.descrp}}</td>
+                        <td>{{row.exp}}</td>
+                        <td>{{row.salary}}</td>
+                        <!-- <td><button class="btn btn-success" (click)="updatejob(row.id)">Update</button></td> -->
+                        <td><button class="btn btn-danger" (click)="deletejob(row.id)">Delete</button></td>
+                        <td><button class="btn btn-primary" (click)="view(row.id)">View</button></td>
+                    </tr>
+            </tbody>
+        </table>
+        <!-- <div class="fixed-bottom">
+            <div class="text-white mb-3 mb-md-0 justify-content-between py-4 px-4 px-xl-5 bg-dark">
+                Copyright © 2022. All rights reserved by JobWala Pvt. Ltd
+                <a class="text-dark">JobWala.com</a>
+            </div>
+        </div> -->
+    </form>
+</div>

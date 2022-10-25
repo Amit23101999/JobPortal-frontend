@@ -1,0 +1,106 @@
+<style>
+    h1 {
+        font-family: 'Georgia', 'cursive', 'bold';
+    }
+    
+    body {
+        background-image: url("https://digitallearning.eletsonline.com/wp-content/uploads/2018/10/Job-Seekers.jpg");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0.4;
+    }
+    
+    .card {
+        width: 300px;
+        height: 550px;
+        color: rgb(17, 15, 15);
+        padding: 100px 50px;
+        font-family: 'Montserrat', 'sans-serif';
+        max-width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration-color: black;
+        /* margin-top: 10px; */
+        margin-left: 50px;
+        opacity: 0.9;
+    }
+    
+    .link:hover {
+        background-color: rgb(25, 196, 33);
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    }
+    
+    tbody {
+        overflow-y: scroll;
+        overflow-x: scroll;
+    }
+    
+    table {
+        top: auto;
+    }
+    
+    .back {
+        margin-left: 90%;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <!-- <div class="card" style="width: 1170px;"> -->
+</body>
+
+<div class="card" style="width: 1170px;">
+    <button (click)="back()" class="back btn btn-success">Back</button>
+    <form action="\" method="post">
+
+        <table class="table table-light">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Experince</th>
+                    <th scope="col">Salary</th>
+                    <!-- <th scope="col">Dept</th> -->
+                    <th scope="col">Apply Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <tr *ngFor="let row of activejobs">
+                        <td>{{row.id}}</td>
+                        <td>{{row.role}}</td>
+                        <td>{{row.company}}</td>
+                        <td>{{row.descrp}}</td>
+                        <td>{{row.exp}}</td>
+                        <td>{{row.salary}}</td>
+                        <!-- <td>{{row.dept}}</td> -->
+                        <td><button class="applybutton btn btn-primary" (click)="applylink(row.id)">Apply</button></td>
+                    </tr>
+                    <tr>
+                        <!-- <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td> -->
+                    </tr>
+                    <tr>
+                        <!-- <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td> -->
+                    </tr>
+            </tbody>
+        </table>
+        <!-- <div class="fixed-bottom">
+            <div class="text-white mb-3 mb-md-0 justify-content-between py-4 px-4 px-xl-5 bg-dark">
+                Copyright © 2022. All rights reserved.
+                <a class="text-dark">JobWala.com</a>
+            </div>
+        </div> -->

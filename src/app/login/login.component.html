@@ -1,0 +1,139 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="conatiner">
+        <h1 class="departmenth1"><i><u>DEPARTMENT</u></i></h1>
+        <div class="conatiner">
+            <p>1. If you want to apply for Technical job then please click below:</p>
+            <button (click)="technologylogin()" class="technology btn btn-info">Technology</button><br><br>
+            <p>2. If you want to apply for medical job then please click below:</p>
+            <button (click)="mediacllogin()" class="medical btn btn-info">Medical</button><br><br>
+            <p>3. If you want to apply for HR/Management job then please click below:</p>
+            <button (click)="humanresourcelogin()" class="humanresource btn btn-info">Human Resource(HR)</button><br><br>
+            <p>4. If you want to apply for Sales and Marketing job then please click below:</p>
+            <button (click)="marketinglogin()" class="marketing btn btn-info">Marketing and Sale's</button><br><br>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <h3><b>Already have an Account ?</b></h3>
+         <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div> 
+        <div>
+            <b>Applicant Job ID:</b>
+            <input type="text" name="id" [(ngModel)]="id"> <br><br>
+            <b>Date Of Birth:</b>
+            <input type="date" name="dateofbirth"><br>
+            <br> 
+            <button (click)="handlelogin()" class="btn btn-success loginbutton">Login</button>
+            <span class="container"><button (click)="handlelogin()" class="btn btn-success loginbutton">Login</button></span>
+        </div>
+        <div class="conatiner">
+            <p>{{status}}</p>
+        </div>
+
+    </div>
+</body>
+
+</html> -->
+
+
+
+<style>
+    h1 {
+        font-family: 'Georgia', 'cursive', 'bold';
+    }
+    
+    body {
+        background-image: url("https://digitallearning.eletsonline.com/wp-content/uploads/2018/10/Job-Seekers.jpg");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 1;
+    }
+    
+    .card {
+        width: 300px;
+        height: 500px;
+        color: rgb(17, 15, 15);
+        padding: 35px 50px;
+        font-family: 'Montserrat', 'sans-serif';
+        max-width: 50%;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration-color: black;
+        margin-top: 10px;
+        margin-left: 75px;
+        opacity: 0.95;
+    }
+    
+    .link:hover {
+        background-color: rgb(25, 196, 33);
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .containerL {
+        margin-right: 75px;
+    }
+    
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="row">
+        <div class="card" style="width: 900px;">
+            <!-- <img width="150" alt="Logo" src="/assets/logo.png"> -->
+            <!-- <div class="container"> -->
+            <h1><b><u>DEPARTMENT</u></b></h1>
+            <div class="conatiner">
+                <b><i> <p>1. If you want to apply for Technical job then please click below:</p>
+                <button (click)="technologylogin()" class="link technology btn btn-info">Technology</button><br><br>
+                <p>2. If you want to apply for medical job then please click below:</p>
+                <button (click)="mediacllogin()" class="link medical btn btn-info">Medical</button><br><br>
+                <p>3. If you want to apply for HR/Management job then please click below:</p>
+                <button (click)="humanresourcelogin()" class="link humanresource btn btn-info">Human Resource(HR)</button><br><br>
+                <p>4. If you want to apply for Sales and Marketing job then please click below:</p>
+                <button (click)="marketinglogin()" class="link marketing btn btn-info">Marketing and Sale's</button></i></b><br><br>
+            </div>
+        </div>
+        <div class="card" style="width: 325px; height: fit-content;">
+            <div class="conatinerL">
+                <h3><b>Already Applied ?</b></h3>
+                <!-- <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div> -->
+                <div>
+                    <b>Appication I'd:</b>
+                    <input type="text" name="id" [(ngModel)]="id"> <br><br>
+                    <button (click)="handlelogin()" class="btn btn-success loginbutton">Check Status</button>
+                    <span class="container"><button (click)="home()" class="btn btn-success loginbutton">Home</button></span>
+                    <!-- <span class="container"><button (click)="handlelogin()" class="btn btn-success loginbutton">Login</button></span>-->
+                </div>
+                <br>
+                <br>
+                <div class="conatiner">
+                    <p>{{status}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="fixed-bottom">
+        <div class="text-white mb-3 mb-md-0 justify-content-between py-4 px-4 px-xl-5  bg-dark">
+            Copyright © 2022. All rights reserved.
+            <a class="text-dark">JobWala.com</a>
+        </div>
+    </div>

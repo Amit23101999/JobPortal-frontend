@@ -1,0 +1,43 @@
+<body>
+    <!-- <div class="card" style="width: 1170px;"> -->
+    <!-- <form (ngSubmit)="updatesubmit()"> -->
+    <table class="table table-light">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Description</th>
+                <th scope="col">Experience</th>
+                <!-- <th scope="col">Location</th> -->
+                <th scope="col">CTC</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <tr *ngFor="let row of postedjob">
+                    <td>{{row.id}}</td>
+                    <td>{{row.company}}</td>
+                    <td><input type="text" class="form-control" name="role" [(ngModel)]="row.role" required="required"></td>
+                    <td><input type="text" class="form-control" name="descrp" [(ngModel)]="row.descrp" required="required"></td>
+                    <td><input type="number" class="form-control" name="exp" [(ngModel)]="row.exp" required="required"></td>
+                    <td><input type="text" class="form-control" name="salary" [(ngModel)]="row.salary" required="required"></td>
+                    <!-- <td>{{row.role}}</td>
+                    <td>{{row.descrp}}</td>
+                    <td>{{row.exp}}</td>
+                    <td>{{row.salary}}</td> -->
+                    <!-- <td><button (click)="updatesubmit(row.id,row.company,row.role,row.descrp,row.exp,row.salary)" class="btn btn-suucess">Save</button></td> -->
+                    <!-- <td><button (click)="updatesubmit(row.id)" class="btn btn-suucess">Save</button></td> -->
+                </tr>
+        </tbody>
+    </table>
+    <!-- </form> -->
+    <div class="fixed-bottom">
+        <div class="text-white mb-3 mb-md-0 justify-content-between py-4 px-4 px-xl-5 bg-dark">
+            Copyright © 2022. All rights reserved.
+            <a class="text-dark">JobWala.com</a>
+        </div>
+    </div>
+</body>

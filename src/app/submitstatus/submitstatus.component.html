@@ -1,0 +1,35 @@
+<style>
+    .submit {
+        margin-left: 50px;
+    }
+    
+    .back {
+        margin: 20px;
+    }
+</style>
+<form (ngSubmit)="statussubmit()">
+    <h3><b>Job Code:</b></h3>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">
+            <i class="fa fa-user"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" aria-describedby="nameHelp" name="applicant_details_id" [(ngModel)]="statusobj.applicant_details_id" readonly>
+    </div>
+    <h3><b>Enter your Status:</b></h3>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">
+            <i class="fa fa-user"></i>
+          </span>
+        </div>
+        <input type="text" class="form-control" aria-describedby="nameHelp" placeholder="Enter your status either Approve/Rejected/Pending" name="status" [(ngModel)]="statusobj.status">
+    </div>
+
+    <button type='submit' class="submit btn btn-success">submit</button>
+    <button (click)='back()' class="back btn btn-success">back</button>
+</form>
+<div class="conatiner">
+    <b><i>{{responsemessage}}</i></b>
+</div>

@@ -1,0 +1,31 @@
+<html>
+<form (ngSubmit)="companysubmit()">
+    <h3><b>Enter Your Company Name:</b></h3>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">
+            <i class="fa fa-user"></i>
+          </span>
+        </div>
+        <input type="text" aria-describedby="nameHelp" placeholder="Enter your Company name" name="companyName" [(ngModel)]="companyregisterdetails.companyName">
+    </div>
+    <h3><b>Enter Your Password:</b></h3>
+    <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">
+            <i class="fa fa-user"></i>
+          </span>
+        </div>
+        <input type="password" aria-describedby="nameHelp" placeholder="Enter your password" name="password" [(ngModel)]="companyregisterdetails.password">
+    </div>
+    <button type='submit' class="btn btn-success">submit</button>
+    <button (click)="backclick()" class="btn btn-success back">back</button>
+</form>
+<br><br><br>
+
+<div class="container">
+    <strong>{{responsemessage}}</strong>
+</div>
+<!-- end of form --->
+
+</html>

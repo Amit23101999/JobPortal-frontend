@@ -1,0 +1,98 @@
+<style>
+    h1 {
+        font-family: 'Georgia', 'cursive', 'bold';
+    }
+    
+    body {
+        background-image: url("https://digitallearning.eletsonline.com/wp-content/uploads/2018/10/Job-Seekers.jpg");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0.4;
+    }
+    
+    .card {
+        width: 300px;
+        height: 550px;
+        color: rgb(17, 15, 15);
+        padding: 100px 50px;
+        font-family: 'Montserrat', 'sans-serif';
+        max-width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration-color: black;
+        margin-left: 50px;
+        opacity: 0.85;
+    }
+    
+    .link:hover {
+        background-color: rgb(25, 196, 33);
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
+    }
+    
+    .back {
+        margin-left: 90%;
+        margin-bottom: 20px;
+    }
+</style>
+
+
+<body></body>
+<!-- <div class="card" style="width: 1170px;"> -->
+
+<div class="card" style="width: 1170px;">
+
+    <form>
+        <button (click)="backhome()" class="back link btn btn-light">Back</button>
+        <table class="table table-light">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email ID</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">Experince</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Qualification</th>
+                    <th scope="col">Status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of  applicant_details">
+                    <td>{{row.id}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.email}}</td>
+                    <td>{{row.dob}}</td>
+                    <td>{{row.exp}}</td>
+                    <td>{{row.phone}}</td>
+                    <td>{{row.qualification}}</td>
+                    <!-- <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            </div>
+                            <select class="custom-select" id="inputGroupSelect01">
+                          <option value="1">Choose...</option>
+                          <option  value="Approve">Approve</option>
+                          <option  value="Reject">Reject</option>
+                          <option  value="Pending">Pending</option>
+                        </select>
+                        </div> -->
+                    <td>
+                        <button (click)="statussubmit(row.id)" class="btn btn-success">Change Status</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="fixed-bottom">
+        <div class="text-white mb-3 mb-md-0 justify-content-between py-4 px-4 px-xl-5 bg-dark">
+            Copyright © 2022. All rights reserved.
+            <a class="text-dark">JobWala.com</a>
+        </div>
+    </div>

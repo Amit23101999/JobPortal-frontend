@@ -1,0 +1,191 @@
+<!-- <div class="conatiner">
+    <div class="card  bg-light">
+        <div class="card-body mx-auto">
+            <h1 class="card-title mt-3 text-center"><u><i><b>Create New Job</b></i></u></h1>
+            <p class="text-center">Please provide the below details..</p>
+
+            Form started 
+            <form action="\" method="post">
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                        <i class="fa fa-user" ></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" aria-describedby="technologyHelp" placeholder="Enter company name">
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i ><img src="/assets/technology.png"  width="20px" height="25px" alt="image"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Technologies">
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i ><img src="/assets/skill.png"  width="20px" height="20px" alt="image"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" aria-describedby="phoneHelp" placeholder="Enter skills required">
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i ><img src="/assets/experince.png"  width="20px" height="20px" alt="image"></i>
+                      </span>
+                    </div>
+                    <input type="number" class="form-control" aria-describedby="dobHelp" placeholder="Enter minimum Experince required">
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i ><img src="/assets/location.png"  width="20px" height="20px" alt="image"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" aria-describedby="qualificationHelp" placeholder="Enter job location">
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i ><img src="/assets/ctc.png"  width="20px" height="20px" alt="image"></i>
+                      </span>
+                    </div>
+                    <input type="number" class="form-control" aria-describedby="expHelp" placeholder="Enter CTC Per Annum">
+                </div>
+                <button (click)="postjobdetails()" class="btn btn-block btn-success"> Post Job</button>
+            </form>
+             end of form 
+        </div>
+    </div>
+</div> -->
+
+<style>
+    h1 {
+        font-family: 'Georgia', 'cursive', 'bold';
+    }
+    
+    body {
+        background-image: url("https://digitallearning.eletsonline.com/wp-content/uploads/2018/10/Job-Seekers.jpg");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0.9;
+    }
+    
+    .card {
+        width: 300px;
+        height: 550px;
+        color: rgb(17, 15, 15);
+        padding: 50px 50px;
+        font-family: 'Montserrat', 'sans-serif';
+        max-width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration-color: black;
+        margin-top: 10px;
+        margin-left: 200px;
+        opacity: 0.8;
+    }
+    
+    .link:hover {
+        background-color: rgb(25, 196, 33);
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<body>
+    <div class="card" style="width: 900px;">
+        <h1 class="card-title mt-3 text-center"><u><b>Create New Job</b></u></h1>
+        <form (ngSubmit)="companyformsubmit(companyformdetail.company)">
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                    <i ><img src="/assets/experince.png"  width="20px" height="20px" alt="image"></i>
+              </span>
+                </div>
+                <input type="number" class="form-control" placeholder="Enter Job id" name="id" [(ngModel)]="companyformdetail.id">
+            </div>
+
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                <i class="fa fa-user" ></i>
+              </span>
+                </div>
+                <input type="text" class="form-control" aria-describedby="technologyHelp" placeholder="Enter company name" name="company" [(ngModel)]="companyformdetail.company">
+            </div>
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                    <i ><img src="/assets/technology.png"  width="20px" height="25px" alt="image"></i>
+              </span>
+                </div>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Role" name="role" [(ngModel)]="companyformdetail.role">
+            </div>
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                    <i ><img src="/assets/skill.png"  width="20px" height="20px" alt="image"></i>
+              </span>
+                </div>
+                <input type="text" class="form-control" aria-describedby="phoneHelp" placeholder="Enter skills required" name="descrp" [(ngModel)]="companyformdetail.descrp">
+            </div>
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                    <i ><img src="/assets/experince.png"  width="20px" height="20px" alt="image"></i>
+              </span>
+                </div>
+                <input type="number" class="form-control" aria-describedby="dobHelp" placeholder="Enter minimum Experince required in years" name="exp" [(ngModel)]="companyformdetail.exp">
+            </div>
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                    <i ><img src="/assets/experince.png"  width="20px" height="20px" alt="image"></i>
+              </span>
+                </div>
+                <input type="number" class="form-control" placeholder="Enter Job Type 1.Technology 2.Medical 3.Human Resource 4.Marketing" name="dept" [(ngModel)]="companyformdetail.dept">
+            </div>
+
+            <!-- <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                    <i ><img src="/assets/location.png"  width="20px" height="20px" alt="image"></i>
+              </span>
+                </div>
+                <input type="text" class="form-control" aria-describedby="qualificationHelp" placeholder="Enter job location" name="location" [(ngModel)]="companyformdetail.location">
+            </div> -->
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                    <i ><img src="/assets/ctc.png"  width="20px" height="20px" alt="image"></i>
+              </span>
+                </div>
+                <input type="text" class="form-control" aria-describedby="expHelp" placeholder="Enter CTC Per Annum" name="salary" [(ngModel)]="companyformdetail.salary">
+            </div>
+            <button type="submit" class="btn btn-block btn-success"> Post Job</button>
+        </form>
+        <br>
+        <!-- <div class="container">
+            <strong>{{companymessage}}</strong>
+        </div> -->
+        <div class="fixed-bottom">
+            <div class="text-white mb-3 mb-md-0 justify-content-between py-3 px-3 px-xl-4 bg-dark">
+                Copyright © 2022. All rights reserved.
+                <a class="text-dark">JobWala.com</a>
+            </div>
+        </div>

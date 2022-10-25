@@ -1,0 +1,53 @@
+<html>
+<table class="table">
+    <thead class="heading">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Role</th>
+            <th scope="col">Company</th>
+            <th scope="col">Description</th>
+            <th scope="col">Experince</th>
+            <th scope="col">Salary</th>
+            <!-- <th scope="col">Dept</th> -->
+            <th scope="col">Apply Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <tr *ngFor="let row of activejobs">
+                <td>{{row.id}}</td>
+                <td>{{row.role}}</td>
+                <td>{{row.company}}</td>
+                <td>{{row.descrp}}</td>
+                <td>{{row.exp}}</td>
+                <td>{{row.salary}}</td>
+                <td><button class="applybutton btn btn-primary" type="submit">Apply</button></td>
+                <!-- <td>{{row.dept}}</td>
+                         <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+
+            </tr>
+            <tr>
+                <!-- <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td> -->
+            </tr>
+            <tr>
+                <!-- <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td> -->
+            </tr>
+    </tbody>
+</table>
+
+<div class="conatiner">
+    <button (click)="logoutclick()" class="btn btn-primary">Logout</button>
+</div>
+
+</html>
